@@ -1,10 +1,7 @@
 package sia.tacocloud.data;
 
+import org.springframework.data.repository.CrudRepository;
 import sia.tacocloud.model.TacoOrder;
 
-import java.util.Optional;
-
-public interface OrderRepository {
-    TacoOrder save(TacoOrder tacoOrder);
-    Optional<TacoOrder> findById(Long id);
+public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
 }
