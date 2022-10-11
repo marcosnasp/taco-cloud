@@ -1,12 +1,16 @@
 package sia.tacocloud.model;
 
 import lombok.Data;
-import org.springframework.data.relational.core.mapping.Table;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
-@Table
+@Entity
+@Table(name = "Ingredient_Ref")
 public class IngredientRef {
-
+    @Id
     private final String ingredient;
 
 }
